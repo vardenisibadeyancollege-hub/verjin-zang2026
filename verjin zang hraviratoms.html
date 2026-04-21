@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="hy">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Վերջին Զանգ 2026</title>
+
+<script src="https://cdn.tailwindcss.com"></script>
+
+<style>
+.hero-bg{
+    background:url('toms1.jpg');
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+    min-height:100vh;
+}
+
+.bell{animation:ring 2s infinite;}
+@keyframes ring{
+0%,100%{transform:rotate(-15deg)}
+50%{transform:rotate(15deg)}
+}
+
+.details-card{
+transition:0.4s;
+}
+.details-card:hover{
+transform:translateY(-10px) scale(1.03);
+}
+
+#fon {
+    background-color: #b5d9f3;
+}
+
+#fon2 {
+    background-color: white;
+}
+</style>
+</head>
+
+<body class="bg-gradient-to-br from-blue-50 via-cyan-50 to-white text-slate-800">
+
+<div class="max-w-[800px] mx-auto">
+
+<!-- HERO -->
+<div class="hero-bg flex items-center justify-center text-white text-center">
+</div>
+
+<!-- DETAILS -->
+<div class="bg-white -mt-10 rounded-3xl shadow-xl p-10" id="fon">
+
+<div class="grid md:grid-cols-3 gap-6 text-center">
+
+<div class="details-card border p-6 rounded-2xl" id="fon2">
+<div class="text-5xl mb-4">📅</div>
+<h2 class="text-2xl font-bold text-blue-600">23 մայիսի</h2>
+<p>2026</p>
+</div>
+
+<div class="details-card border p-6 rounded-2xl" id="fon2">
+<div class="text-5xl mb-4">🕙</div>
+<h2 class="text-2xl font-bold text-blue-600">11:00</h2>
+<p>Սկիզբ</p>
+</div>
+
+<div class="details-card border p-6 rounded-2xl" id="fon2">
+<div class="text-5xl mb-4">📍</div>
+<h2 class="text-2xl font-bold text-blue-600">Վարդենիսի մշակույթի պալատ</h2>
+</div>
+
+</div>
+
+<div class="text-center mt-10">
+
+<button onclick="showRSVP()" 
+class="bg-gradient-to-r from-blue-400 to-cyan-400 
+hover:from-blue-500 hover:to-cyan-500 
+text-white px-10 py-5 rounded-2xl text-xl shadow-lg 
+active:scale-95 transition">
+
+Ես կլինեմ միջոցառմանը 🎓
+</button>
+
+</div>
+</div>
+
+</div>
+
+<!-- MODAL -->
+<div id="modal" class="hidden fixed inset-0 bg-black/70 flex items-center justify-center">
+
+<div class="bg-white rounded-3xl p-10 text-center max-w-sm">
+
+<div class="text-6xl mb-6">🎉</div>
+
+<h2 class="text-3xl text-blue-600 mb-3">Շնորհակալություն</h2>
+
+<p>Ձեր մասնակցությունը հաստատված է</p>
+
+<button onclick="closeModal()" 
+class="mt-6 bg-gradient-to-r from-blue-400 to-cyan-400 
+hover:from-blue-500 hover:to-cyan-500 
+text-white px-8 py-3 rounded-xl">
+
+Փակել
+</button>
+
+</div>
+</div>
+
+<script>
+function showRSVP(){
+document.getElementById('modal').classList.remove('hidden');
+}
+
+function closeModal(){
+document.getElementById('modal').classList.add('hidden');
+}
+</script>
+
+</body>
+</html>
